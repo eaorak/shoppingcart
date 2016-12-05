@@ -17,9 +17,14 @@ class ShoppingCartTest extends FunSuite {
     assert(ShoppingCart.calculateTotal("Apple", "Orange") == 0.85)
   }
 
-  test("Three apples and five oranges should cost £3.05") {
-    assert(ShoppingCart.calculateTotal("Apple", "Apple", "Apple", "Orange", "Orange", "Orange", "Orange", "Orange") == 3.05)
+  test("Three apples and five oranges should cost £2.2") {
+    assert(ShoppingCart.calculateTotal("Apple", "Apple", "Apple", //
+      "Orange", "Orange", "Orange", "Orange", "Orange") == 2.2)
   }
 
+  test("Five apples and six oranges should cost £2.8") {
+    assert(ShoppingCart.calculateTotal("Apple", "Apple", "Apple", "Apple", "Apple", //
+      "Orange", "Orange", "Orange", "Orange", "Orange", "Orange") == 2.8)
+  }
 
 }
